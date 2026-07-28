@@ -1,13 +1,12 @@
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-      int left=0;
-      int right=0;
-      int maxlen=0;
-      int n=s.size();
-      vector<int>mpp(256,-1);
+      vector < int > mpp(256, -1);
+      int left = 0, right = 0;
+      int n = s.size();
+      int maxlen = 0;
       while(right<n){
-        if(mpp[s[right]] !=-1){
+        if(s[right] !=-1){
             left=max(left,mpp[s[right]]+1);
         }
         mpp[s[right]]=right;
@@ -18,3 +17,4 @@ public:
       return maxlen;
     }
 };
+    
