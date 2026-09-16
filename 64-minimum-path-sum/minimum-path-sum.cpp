@@ -9,9 +9,9 @@ int f(int i,int j,vector<vector<int>>& grid,vector<vector<int>>& dp){
     return dp[i][j]=min(up,left);
 }
     int minPathSum(vector<vector<int>>& grid) {
-        int n=grid.size();
-        int m=grid[0].size();
-        vector<vector<int>>dp(n,vector<int>(m,-1));
-        return f(n-1,m-1,grid,dp);
+        int m=grid.size();
+        int n=grid[0].size();
+        vector<vector<int>>dp(m,vector<int>(n,-1));
+        return f(m-1,n-1,grid,dp);
     }
 };
